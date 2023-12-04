@@ -16,4 +16,8 @@ class object_detector():
                 if(int(box.cls) == 32):
                     x1, y1, x2, y2 = box.xyxy[0]
                     return int((x1+x2)/2), int((y1+y2)/2)
+        
+
+    
+
     

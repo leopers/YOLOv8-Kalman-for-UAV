@@ -32,14 +32,14 @@ class KalmanFilter():
         #initial cov matrix can be initialized as an identity matrix
         self.P = np.eye(self.A.shape[1])
 
-    def predict(self, u : np.array):
-        self.x = self.A@self.x + self.B@u
+    def predict(self):
+        self.x = self.A@self.x + self.B@self.u
         self.P = self.A@self.P@self.A.T + self.Q
-        return self.x, self.P
+        return self.x[:2]
     
     def filter(self, z):
         K = self.P@self.H.T@np.linalg.inv(self.R+self.H@self.P@self.H.T)
         self.x = self.x + K@(z-self.H@self.x)
         self.P = self.P - K@self.H@self.P
-        return self.x, self.P
+        return self.x[:2]
     

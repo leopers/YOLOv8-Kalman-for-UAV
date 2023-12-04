@@ -9,7 +9,8 @@ while True:
 
     center = detector.detect(img)
 
-    img = cv2.circle(img, center, radius=20, color=(0, 0, 255), thickness=-1)
+    if len(center)>0:
+        img = cv2.circle(img, center, radius=20, color=(0, 0, 255), thickness=-1)
     
     cv2.imshow("Detection", img)
 
