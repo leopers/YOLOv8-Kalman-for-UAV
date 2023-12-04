@@ -38,7 +38,8 @@ class KalmanFilter():
         return self.x, self.P
     
     def filter(self, z):
-        K = self.P@self.P.T@np.linalg.inv(self.R+self.C@self.P@self.C.T)
-        self.x = self.x + K@(z-self.C@self.x)
-        self.P = self.P - K@self.C@self.P
+        K = self.P@self.H.T@np.linalg.inv(self.R+self.H@self.P@self.H.T)
+        self.x = self.x + K@(z-self.H@self.x)
+        self.P = self.P - K@self.H@self.P
         return self.x, self.P
+    
