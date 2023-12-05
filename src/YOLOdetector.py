@@ -13,7 +13,7 @@ class object_detector():
         for r in results:
             boxes = r.boxes
             for box in boxes:
-                if(int(box.cls) == 32):
+                if(int(box.cls) == 0):
                     x1, y1, x2, y2 = box.xyxy[0]
                     return int((x1+x2)/2), int((y1+y2)/2)
         
