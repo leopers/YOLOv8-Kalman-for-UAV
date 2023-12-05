@@ -10,12 +10,15 @@ class object_detector():
     def detect(self, frame):
         results = self.model(frame, stream=True)
         
+        centers=[]
         for r in results:
             boxes = r.boxes
             for box in boxes:
-                if(int(box.cls) == 0):
+                if(int(box.cls) == 32):
                     x1, y1, x2, y2 = box.xyxy[0]
-                    return int((x1+x2)/2), int((y1+y2)/2)
+                    centers.append(np.array([[int((x1+x2)/2)], [int((y1+y2)/2)]]))
+                
+        return centers
         
 
     
