@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Marker']
+
+roboflow:
+  workspace: fiducial-markers
+  project: fiducial-markers
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/fiducial-markers/fiducial-markers/dataset/1
