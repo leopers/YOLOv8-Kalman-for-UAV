@@ -4,7 +4,7 @@ import numpy as np
 import math
 
 class object_detector():
-    def __init__(self, model = YOLO('/Users/leonardodias/Desktop/Graduação ITA/Exame CM/Exame-CM203/best.pt')):
+    def __init__(self, model = YOLO('utils/best.pt')):
         self.model = model
 
     def detect(self, frame):
