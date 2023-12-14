@@ -1,4 +1,4 @@
-# Exame de CM-203
+# Exame de CM-203 (Leonardo Dias, Marcos Levi, Victor Davi dos Santos)
 
 Esse projeto consiste no treinamento e utilização de uma rede neural do tipo YOLOv8 para detecção de marcos fiduciais para propósitos UAV.
 O Tracking dos referidos marcos é realizado através da detecção destes e previsão cinemática utilizando um Filtro de Kalman.
