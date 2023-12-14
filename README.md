@@ -18,7 +18,7 @@ O dataset de treino foi capturado por uma câmera de celular e passou por um pro
     └── /utils/
         ├── /Training_Dataset    (Dataset de treino, validação e teste)
         ├── best.pt              (Modelo treinado com o dataset acima)
-        └── marco_pouco.png      (Modelo de marco fiducial)
+        └── marco_pouso.png      (Modelo de marco fiducial)
 ```
 ## Para rodar o projeto
 ```
