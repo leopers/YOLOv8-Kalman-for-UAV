@@ -19,7 +19,6 @@ class object_detector():
                 centers.append(np.array([[int((x1+x2)/2)], [int((y1+y2)/2)]]))
                 
         return centers
-        
 
     
 

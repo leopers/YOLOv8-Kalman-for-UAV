@@ -16,7 +16,8 @@ while True:
 
     if (len(center)>0):
 
-        cv2.circle(img, (int(center[0][0]), int(center[0][1])), radius=20, color=(0, 0, 255), thickness=-1)
+        cv2.circle(img, (int(center[0][0]), int(center[0][1])), radius=20, 
+                   color=(0, 0, 255), thickness=-1)
 
         x, y = KF.predict()
 
